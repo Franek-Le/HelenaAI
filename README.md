@@ -2,6 +2,7 @@
 
 ## About
 Helena AI is a Polish AI Vtuber designed to be sassy, sarcastic, and occasionally friendly - with a humorous edge. She's created using a combination of Unity, C#, and Python.
+It's designed to be fully local, but can be used with cloud AI providers.
 
 ## Features
 - **Custom-trained LLM**: Tailored for unique interactions and content generation.
@@ -18,6 +19,7 @@ Helena AI is a Polish AI Vtuber designed to be sassy, sarcastic, and occasionall
 - **Custom Trained TTS Voice**: Her voice is uniquely hers, built from custom training.
 - **Advanced Response Filters**: Ensure responses are clean and safe.
 - **Easy Configuration**: A modern web UI for simple setup and adjustments.
+- **Easy tool / action adding**: Easily add tools (actions) and integrations.
 
 **Not all features are included in the repository, such as the AI models**
 
@@ -40,4 +42,14 @@ Here's a simplified view of how Helena processes inputs:
 
 ## LLM
 The LLM is trained on a hand written dataset.
-It's designed to speak Polish
+
+It's designed to speak Polish and specifically trained for Helena
+
+## Singing
+The singing is done with so-vits-svc with a custom model
+
+## Thinking
+The program has two of the same LLMs. One is the "frontend" LLM that responds to the user, and one is the thinking LLM that generates text in realtime during the conversation and every time the fist LLM gets prompted, the thinking LLM's output is given to it.
+
+## Filters
+The filters are a mix of simple text filters that detect profanity and ML based detectors.
